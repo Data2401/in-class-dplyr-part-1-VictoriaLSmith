@@ -66,7 +66,10 @@ starwars %>%
   select(name,height)
 print("Darth Vader is the tallest human character")
 # c) Which homeworld has the most characters taller than 180 cm?
-starwars %>%
-  filter(height>180) %>%
+tall_people <- starwars %>%
+  filter(height>180)
+table(tall_people$homeworld)
+print("Kamino has the most tall characters")
 
 # d) Does the character with the highest BMI surprise you? Why or why not?
+print("No, because he is a robot so he's very heavy.")
